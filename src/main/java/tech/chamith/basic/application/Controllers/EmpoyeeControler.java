@@ -39,7 +39,7 @@ public class EmpoyeeControler {
     }
 
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/update")
     public ResponseEntity<Employee> updateEmployee(@Validated @RequestBody  Employee employee){
         Employee employee1 = employeeService.updateEmployee(employee);
         return new ResponseEntity<>(employee1,HttpStatus.CREATED);

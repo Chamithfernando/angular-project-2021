@@ -11,6 +11,7 @@ import tech.chamith.basic.application.Service.EmployeeService;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/empoloyee")
 public class EmpoyeeControler {
@@ -38,7 +39,7 @@ public class EmpoyeeControler {
     }
 
 
-    @PutMapping("/add/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Employee> updateEmployee(@Validated @RequestBody  Employee employee){
         Employee employee1 = employeeService.updateEmployee(employee);
         return new ResponseEntity<>(employee1,HttpStatus.CREATED);

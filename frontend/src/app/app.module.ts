@@ -1,3 +1,5 @@
+import {  HttpClientModule } from '@angular/common/http';
+import { EmployeeService } from './employee.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,9 +12,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+
+  //Servicers configured in entire angular application eg :- EmployeeService
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
